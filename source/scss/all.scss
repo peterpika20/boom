@@ -1,0 +1,44 @@
+@import "mixin"; //常用mixin與變數
+@import "reset"; //統一格式
+
+body{
+  background: #000;
+}
+.container{
+  position:relative;
+  top:50%;
+  left:50%;
+  transform: translateX(-50%) translateY(-50%);
+  @include clearfix;
+  background: #fff;
+  .floor{
+    text-align: center;
+    width:25px;
+    height:25px;
+    border:1px solid black;
+    float:left;
+  }
+  .boom{
+    background: red;
+  }
+  .hide{
+    background: blue;
+  }
+
+}
+.title{
+  position: relative;
+  top: 15%;
+  font-size: 70px;
+  width:500px;
+  text-align: center;
+  margin: 0px auto;
+  color:#fff;
+  font-weight: bold;
+}
+.form{
+  width:500px;
+  margin: 220px auto;
+  color:#fff;
+  font-weight: bold;
+}

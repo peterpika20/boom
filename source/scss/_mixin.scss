@@ -1,0 +1,109 @@
+// 預設文字顏色
+$text-color:black;
+// 文字連結顏色
+$link-color:#000;
+// 文字連結背景顏色
+$link-bgcolor:#000;
+// 滑鼠拖曳過後的顏色
+$link-color-hover:#fff;
+// 滑鼠拖曳過後的背景顏色
+$link-bgcolor-hover:#fff;
+// 全域行距
+$line-height:1.8;
+// 網站整體寬度
+$container-width:960px;
+
+// font
+$font-family: "Microsoft JhengHei",PMingLiU,MingLiu,"Segoe UI","Helvetica",Garuda,Arial,sans-serif;
+$font-s:12px;
+$font-m:14px;
+$font-l:18px;
+
+// 基準寬度
+$gutter: 15px;
+
+
+// 清除浮動
+@mixin clearfix{
+    &:before,&:after{
+    content: "";
+    display: table;
+    }
+    &:after{
+      clear: both;
+    }
+  }
+
+// 大小
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// 隱藏文字
+@mixin hide-text{
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// 限制字數 超多以...顯示
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 邊界圓弧
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin border-top-radius($radius) {
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+}
+@mixin border-right-radius($radius) {
+  border-bottom-right-radius: $radius;
+     border-top-right-radius: $radius;
+}
+@mixin border-bottom-radius($radius) {
+  border-bottom-right-radius: $radius;
+   border-bottom-left-radius: $radius;
+}
+@mixin border-left-radius($radius) {
+  border-bottom-left-radius: $radius;
+     border-top-left-radius: $radius;
+}
+
+// 熱門@media相關 數值太接近者先不設定
+@mixin desktop{
+  @media (max-width: 1280px){
+    @content;
+  }
+}
+@mixin ipad{
+  @media (max-width: 768px){
+    @content;
+  }
+}
+@mixin Galaxy-s5-l{
+  @media (max-width: 640px){
+    @content;
+  }
+}
+@mixin iphone-6{
+  @media (max-width: 414px){
+    @content;
+  }
+}
+@mixin Galaxy-s5{
+  @media (max-width: 360px){
+    @content;
+  }
+}
+@mixin iphone-5{
+  @media (max-width: 320px){
+    @content;
+  }
+}
